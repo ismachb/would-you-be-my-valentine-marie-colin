@@ -1,6 +1,3 @@
-// =====================
-// CURSOR TRAIL
-// =====================
 const cursor = document.getElementById('cursor');
 const trailCount = 20;
 const trails = [];
@@ -52,9 +49,6 @@ function animateTrail() {
 }
 animateTrail();
 
-// =====================
-// FLOATING HEARTS BACKGROUND
-// =====================
 const heartsContainer = document.getElementById('floatingHearts');
 const heartSymbols = ['\u2665', '\u2764', '\u2763'];
 
@@ -74,9 +68,6 @@ function createFloatingHeart() {
 setInterval(createFloatingHeart, 500);
 for (let i = 0; i < 15; i++) createFloatingHeart();
 
-// =====================
-// RUNAWAY "NON" BUTTON
-// =====================
 const btnNon = document.getElementById('btnNon');
 const btnOui = document.getElementById('btnOui');
 let dodgeCount = 0;
@@ -162,7 +153,6 @@ function dodgeButton() {
 
     dodgeCount++;
 
-    // Sometimes swap Non text to "Oui" to troll
     if (dodgeCount > 3 && Math.random() < 0.3) {
         btnNon.textContent = trickTexts[Math.floor(Math.random() * trickTexts.length)];
         btnNon.style.background = 'linear-gradient(135deg, #e91e63, #c2185b)';
@@ -199,9 +189,6 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-// =====================
-// OUI BUTTON - SUCCESS!
-// =====================
 const successOverlay = document.getElementById('successOverlay');
 const fireworksCanvas = document.getElementById('fireworks-canvas');
 const ctx = fireworksCanvas.getContext('2d');
@@ -213,9 +200,6 @@ btnOui.addEventListener('click', () => {
     launchFireworks();
 });
 
-// =====================
-// FIREWORKS
-// =====================
 const particles = [];
 const fireworkColors = [
     '#e91e63', '#ff4081', '#f50057', '#ff80ab',
